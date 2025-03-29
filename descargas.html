@@ -1,4 +1,31 @@
 <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Descargas - Gen-Edif3D</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <style>
+    .lang { display: none; }
+    .lang.active { display: block; }
+    nav ul:last-child { justify-content: flex-end; }
+    img { max-width: 100%; height: auto; }
+  </style>
+</head>
+<body>
+  <nav class="container-fluid">
+    <ul>
+      <li><strong>Gen-Edif3D</strong></li>
+    </ul>
+    <ul>
+      <li><a href="index.html">Inicio / Home</a></li>
+      <li><button onclick="toggleLang()">EN/ES</button></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <div class="lang lang-es active">
+      <!DOCTYPE html>
 
 <html lang="es">
 <head>
@@ -22,15 +49,14 @@
   </style>
 <link href="mobile.css" rel="stylesheet"/></head>
 <body>
-
 <nav class="container-fluid">
-<div class="nav-header">
-<ul>
-<li><strong>Gen-Edif3D</strong></li>
-</ul>
+<div class="nav-wrapper">
+<a class="brand" href="index.html">
+<img alt="Logo Gen-Edif3D" class="logo" src="logo-genedif3d.jpeg"/>
+<strong>Gen-Edif3D</strong>
+</a>
 <button aria-label="Menú" id="menu-toggle">☰</button>
-</div>
-<ul class="nav-links" id="nav-links">
+<ul class="nav-links" id="nav-links" style="list-style: none; padding-left: 0;">
 <li><a href="index.html">Inicio</a></li>
 <li><a href="descripcion.html">Descripción</a></li>
 <li><a href="acerca.html">Acerca</a></li>
@@ -39,8 +65,8 @@
 <li><a href="descargas.html">Descargas</a></li>
 <li><a href="soporte.html" role="button">Soporte</a></li>
 </ul>
+</div>
 </nav>
-
 <script>
   const toggle = document.getElementById('menu-toggle');
   const navLinks = document.getElementById('nav-links');
@@ -54,9 +80,9 @@
 <h2>Descargas</h2>
 <h3>Archivos del programa Gen-Edif3D</h3>
 </hgroup>
-<ul>
-<li><a href="https://github.com/GenEdif3D/programa/raw/main/manual_gen-edif3d.pdf" target="_blank">📘 Descargar Manual de Usuario (PDF)</a></li>
-<li><a href="https://github.com/GenEdif3D/programa/raw/main/instalador_gen-edif3d.zip" target="_blank">💾 Descargar Instalador Gen-Edif3D (ZIP)</a></li>
+<ul style="list-style: none; padding-left: 0;">
+<li style="list-style: none;"><a href="https://github.com/GenEdif3D/programa/raw/main/manual_gen-edif3d.pdf" target="_blank">📘 Descargar Manual de Usuario (PDF)</a></li>
+<li style="list-style: none;"><a href="https://github.com/GenEdif3D/programa/raw/main/instalador_gen-edif3d.zip" target="_blank">💾 Descargar Instalador Gen-Edif3D (ZIP)</a></li>
 </ul>
 </section>
 </main>
@@ -76,7 +102,6 @@
     }
   });
 </script>
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const toggle = document.getElementById('menu-toggle');
@@ -86,5 +111,27 @@
     });
   });
 </script>
+</body>
+</html>
+
+    </div>
+    <div class="lang lang-en">
+      <p><em>English version to be translated...</em></p>
+    </div>
+  </main>
+
+  <footer class="container">
+    <small>
+      <a href="#">Política de privacidad / Privacy Policy</a> •
+      <a href="#">Términos / Terms</a>
+    </small>
+  </footer>
+
+  <script>
+    function toggleLang() {
+      document.querySelectorAll('.lang-es').forEach(e => e.classList.toggle('active'));
+      document.querySelectorAll('.lang-en').forEach(e => e.classList.toggle('active'));
+    }
+  </script>
 </body>
 </html>
