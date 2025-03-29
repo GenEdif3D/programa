@@ -22,12 +22,12 @@
   </style>
 <link href="mobile.css" rel="stylesheet"/></head>
 <body>
+
 <nav class="container-fluid">
 <div class="nav-header">
-<div style="display: flex; align-items: center; gap: 0.5rem;">
-<img alt="Logo Gen-Edif3D" src="logo-genedif3d.jpeg" style="height: 32px;"/>
-<strong>Gen-Edif3D</strong>
-</div>
+<ul>
+<li><strong>Gen-Edif3D</strong></li>
+</ul>
 <button aria-label="Menú" id="menu-toggle">☰</button>
 </div>
 <ul class="nav-links" id="nav-links">
@@ -40,6 +40,14 @@
 <li><a href="soporte.html" role="button">Soporte</a></li>
 </ul>
 </nav>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+</script>
 <main class="container">
 <section>
 <hgroup>
@@ -57,8 +65,6 @@
 <a href="index.html">Inicio</a> • <a href="descargas.html">Descargas</a> • <a href="soporte.html">Soporte</a>
 </small>
 </footer>
-
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const toggle = document.getElementById('menu-toggle');
@@ -68,6 +74,16 @@
         navLinks.classList.toggle('open');
       });
     }
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
   });
 </script>
 </body>
