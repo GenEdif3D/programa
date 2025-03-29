@@ -22,14 +22,13 @@
   </style>
 <link href="mobile.css" rel="stylesheet"/></head>
 <body>
+
 <nav class="container-fluid">
 <ul>
-<li>
-<img alt="Logo" src="logo-genedif3d.jpeg" style="height: 32px; vertical-align: middle; margin-right: 8px;"/>
-<strong>Gen-Edif3D</strong>
-</li>
+<li><strong>Gen-Edif3D</strong></li>
 </ul>
-<ul>
+<button aria-label="Menú" id="menu-toggle" style="font-size: 1.5rem;">☰</button>
+<ul class="nav-links" id="nav-links">
 <li><a href="index.html">Inicio</a></li>
 <li><a href="descripcion.html">Descripción</a></li>
 <li><a href="acerca.html">Acerca</a></li>
@@ -39,6 +38,14 @@
 <li><a href="soporte.html" role="button">Soporte</a></li>
 </ul>
 </nav>
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+</script>
+
 <main class="container">
 <section>
 <hgroup>
