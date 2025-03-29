@@ -164,3 +164,80 @@ nav ul li {
     flex-direction: column;
   }
 }
+
+/* Navegación principal */
+nav .nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+nav .brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  gap: 0.5rem;
+}
+
+nav .logo {
+  height: 28px;
+}
+
+/* Menú */
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  nav .nav-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+}
+
+/* Justificación por defecto (pantallas grandes) */
+p, figcaption, li, h3, h2 {
+  text-align: justify;
+}
+
+/* En pantallas pequeñas (móvil), se centra el contenido */
+@media (max-width: 768px) {
+  p, figcaption, li, h3, h2 {
+    text-align: center;
+  }
+}

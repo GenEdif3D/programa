@@ -1,31 +1,4 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Index - Gen-Edif3D</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-  <style>
-    .lang { display: none; }
-    .lang.active { display: block; }
-    nav ul:last-child { justify-content: flex-end; }
-    img { max-width: 100%; height: auto; }
-  </style>
-</head>
-<body>
-  <nav class="container-fluid">
-    <ul>
-      <li><strong>Gen-Edif3D</strong></li>
-    </ul>
-    <ul>
-      <li><a href="index.html">Inicio / Home</a></li>
-      <li><button onclick="toggleLang()">EN/ES</button></li>
-    </ul>
-  </nav>
-
-  <main class="container">
-    <div class="lang lang-es active">
-      <!DOCTYPE html>
 
 <html lang="es">
 <head>
@@ -115,27 +88,5 @@
     });
   });
 </script>
-</body>
-</html>
-
-    </div>
-    <div class="lang lang-en">
-      <p><em>English version to be translated...</em></p>
-    </div>
-  </main>
-
-  <footer class="container">
-    <small>
-      <a href="#">Política de privacidad / Privacy Policy</a> •
-      <a href="#">Términos / Terms</a>
-    </small>
-  </footer>
-
-  <script>
-    function toggleLang() {
-      document.querySelectorAll('.lang-es').forEach(e => e.classList.toggle('active'));
-      document.querySelectorAll('.lang-en').forEach(e => e.classList.toggle('active'));
-    }
-  </script>
 </body>
 </html>
