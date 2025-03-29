@@ -25,10 +25,13 @@
 <body>
 
 <nav class="container-fluid">
-<ul>
-<li><strong>Gen-Edif3D</strong></li>
-</ul>
-<button aria-label="Menú" id="menu-toggle" style="font-size: 1.5rem;">☰</button>
+<div class="nav-header">
+<div style="display: flex; align-items: center; gap: 0.5rem;">
+<img alt="Logo Gen-Edif3D" src="logo-genedif3d.jpeg" style="height: 32px;"/>
+<strong>Gen-Edif3D</strong>
+</div>
+<button aria-label="Menú" id="menu-toggle">☰</button>
+</div>
 <ul class="nav-links" id="nav-links">
 <li><a href="index.html">Inicio</a></li>
 <li><a href="descripcion.html">Descripción</a></li>
@@ -39,13 +42,6 @@
 <li><a href="soporte.html" role="button">Soporte</a></li>
 </ul>
 </nav>
-<script>
-  const toggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('nav-links');
-  toggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-  });
-</script>
 
 <main class="container">
 <h2>Galería Técnica del Programa</h2>
@@ -68,5 +64,16 @@
 <a href="index.html">Inicio</a> • <a href="descargas.html">Descargas</a> • <a href="soporte.html">Soporte</a>
 </small>
 </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', function () {
+        navLinks.classList.toggle('open');
+      });
+    }
+  });
+</script>
 </body>
 </html>
