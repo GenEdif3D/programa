@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Requerimientos del Sistema - Gen-Edif3D</title>
+<link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet"/>
+<style>
+    body { background-color: #f9f9f9; }
+    section { padding-bottom: 2rem; }
+  </style>
+<link href="mobile.css" rel="stylesheet"/></head>
+<body>
+<nav class="container-fluid">
+<div class="nav-header">
+<div style="display: flex; align-items: center; gap: 0.5rem;">
+<img alt="Logo Gen-Edif3D" src="logo-genedif3d.jpeg" style="height: 32px;"/>
+<strong>Gen-Edif3D</strong>
+</div>
+<button aria-label="Menú" id="menu-toggle">☰</button>
+</div>
+<ul class="nav-links" id="nav-links">
+<li><a href="index.html">Inicio</a></li>
+<li><a href="descripcion.html">Descripción</a></li>
+<li><a href="acerca.html">Acerca</a></li>
+<li><a href="imagenes.html">Imágenes</a></li>
+<li><a href="requisitos.html">Requerimientos</a></li>
+<li><a href="descargas.html">Descargas</a></li>
+<li><a href="soporte.html" role="button">Soporte</a></li>
+</ul>
+</nav>
+<main class="container">
+<section>
+<h2>Requerimientos del Sistema</h2>
+<p>Para garantizar el correcto funcionamiento del software Gen-Edif3D, se deben cumplir las siguientes especificaciones mínimas:</p>
+<ul>
+<li><strong>Sistema Operativo:</strong> Windows 11, Windows 10 (versión 1909 o superior), Windows Server 2019</li>
+<li><strong>Arquitectura:</strong> 32 y 64 bits</li>
+<li><strong>Procesador:</strong> Intel o AMD x86-64</li>
+<li><strong>Memoria RAM:</strong> Mínimo 4 GB, recomendado 8 GB</li>
+<li><strong>Espacio en Disco:</strong> Al menos 1 GB de almacenamiento libre</li>
+<li><strong>Software adicional requerido:</strong> Microsoft Excel®, ETABS® versión 18.1.1</li>
+</ul>
+</section>
+</main>
+<footer class="container">
+<small>
+<a href="index.html">Inicio</a> • <a href="descargas.html">Descargas</a> • <a href="soporte.html">Soporte</a>
+</small>
+</footer>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', function () {
+        navLinks.classList.toggle('open');
+      });
+    }
+  });
+</script>
+</body>
+</html>
