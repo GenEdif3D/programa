@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Imágenes - Gen-Edif3D</title>
+<link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet"/>
+<style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .gallery figure {
+      margin: 0;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+    }
+  </style>
+<link href="mobile.css" rel="stylesheet"/></head>
+<body>
+<nav class="container-fluid">
+<div class="nav-header">
+<div style="display: flex; align-items: center; gap: 0.5rem;">
+<img alt="Logo Gen-Edif3D" src="logo-genedif3d.jpeg" style="height: 32px;"/>
+<strong>Gen-Edif3D</strong>
+</div>
+<button aria-label="Menú" id="menu-toggle">☰</button>
+</div>
+<ul class="nav-links" id="nav-links">
+<li><a href="index.html">Inicio</a></li>
+<li><a href="descripcion.html">Descripción</a></li>
+<li><a href="acerca.html">Acerca</a></li>
+<li><a href="imagenes.html">Imágenes</a></li>
+<li><a href="requisitos.html">Requerimientos</a></li>
+<li><a href="descargas.html">Descargas</a></li>
+<li><a href="soporte.html" role="button">Soporte</a></li>
+</ul>
+</nav>
+<main class="container">
+<h2>Galería Técnica del Programa</h2>
+<p>Capturas del entorno de Gen-Edif3D, interacción con ETABS®, espectros y resultados de análisis estructural.</p>
+<div class="gallery">
+<figure><img alt="Formulario vacío" src="formulario_vacio.png"/><figcaption>Formulario de entrada vacío</figcaption></figure>
+<figure><img alt="Espectro de diseño" src="espectro.png"/><figcaption>Ventana de espectro de diseño</figcaption></figure>
+<figure><img alt="Formulario con modelo 3D" src="formulario_con_modelo.png"/><figcaption>Formulario lleno + modelo 3D</figcaption></figure>
+<figure><img alt="Espectro cargado" src="espectro_con_modelo.png"/><figcaption>Espectro cargado y estructura</figcaption></figure>
+
+
+<figure><img alt="Colapso en X" src="colapso_x.png"/><figcaption>Colapso estructural - dirección X</figcaption></figure>
+<figure><img alt="Colapso en Y" src="colapso_y.png"/><figcaption>Colapso estructural - dirección Y</figcaption></figure>
+<figure><img alt="Distorsiones aceptadas" src="distorsiones.png"/><figcaption>Distorsión en modelos aceptados</figcaption></figure>
+<figure><img alt="Peso vs Distorsión" src="peso_distorsion.png"/><figcaption>Relación peso vs distorsión</figcaption></figure>
+</div>
+</main>
+<footer class="container">
+<small>
+<a href="index.html">Inicio</a> • <a href="descargas.html">Descargas</a> • <a href="soporte.html">Soporte</a>
+</small>
+</footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', function () {
+        navLinks.classList.toggle('open');
+      });
+    }
+  });
+</script>
+</body>
+</html>
